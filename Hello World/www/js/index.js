@@ -52,6 +52,11 @@ var app = {
 			navigator.vibrate([1000, 1000, 3000, 1000, 5000]);
 		})
 
+		window.addEventListener("batterystatus", () => {
+			document.getElementById('batStatus').innerHTML = "Level: " + status.level + " isPlugged: " + status.isPlugged;
+		}, false);
+
+
 
 		console.log('Received Event: ' + id);
 	}
