@@ -54,6 +54,7 @@ var app = {
 
 		window.addEventListener("batterystatus", (status) => {
 			document.getElementById('batStatus').innerHTML = "Level: " + status.level + " isPlugged: " + status.isPlugged;
+			document.getElementById('versionNumber').innerHTML = `Device version ${device.version}`
 		}, false);
 
 
